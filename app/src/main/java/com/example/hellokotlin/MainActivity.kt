@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         val btnKotlin = findViewById<Button>(R.id.btnKotlin)
         btnKotlin.setOnClickListener {
             intent = Intent(this@MainActivity, BmiKotlinActivity::class.java)
+            startActivity(intent)
         }
 
         val btnJava = findViewById<Button>(R.id.btnJava)

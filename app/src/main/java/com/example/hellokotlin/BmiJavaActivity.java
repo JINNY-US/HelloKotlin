@@ -27,6 +27,7 @@ public class BmiJavaActivity extends AppCompatActivity {
         btnBmi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String sHeight, sWeight;
                 /*String sHeight = heightField.getText().toString();
                 String sWeight = weightField.getText().toString();*/
                 /*if(weightField.getText().toString().isEmpty() || heightField.getText().toString().isEmpty()){
@@ -38,8 +39,8 @@ public class BmiJavaActivity extends AppCompatActivity {
                     }
                 }*/
                 try {
-                    String sHeight = heightField.getText().toString();
-                    String sWeight = weightField.getText().toString();
+                    sHeight = heightField.getText().toString();
+                    sWeight = weightField.getText().toString();
                     double bmi = Double.parseDouble(sWeight) / Math.pow(Double.parseDouble(sHeight)/100., 2.);
                     txtResult.setText("Your BMI = " + bmi);
                 } catch(Exception e) {
