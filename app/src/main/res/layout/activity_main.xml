@@ -11,9 +11,10 @@
         android:id="@+id/btnJava"
         android:layout_width="230dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="152dp"
         android:text="VIEW BINDING - JAVA"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,11 +22,32 @@
         android:id="@+id/btnKotlin"
         android:layout_width="230dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="84dp"
         android:text="VIEW BINDING - KOTLIN"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnJava" />
+
+    <Button
+        android:id="@+id/btnVarJava"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="VARIABLE - JAVA"
+        app:layout_constraintBottom_toBottomOf="@+id/btnVarKotlin"
+        app:layout_constraintEnd_toStartOf="@+id/btnVarKotlin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnVarKotlin" />
+
+    <Button
+        android:id="@+id/btnVarKotlin"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="236dp"
+        android:text="VARIABLE - KOTLIN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
