@@ -8,10 +8,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class FlowControlJavaActivity extends AppCompatActivity {
+/*import static com.example.hellokotlin.ToastUtilJava.Toast_long;
+import static com.example.hellokotlin.ToastUtilJava.Toast_short;*/
 
+public class FlowControlJavaActivity extends AppCompatActivity {
     EditText fieldNumber;
     Button btnLD;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -27,12 +30,16 @@ public class FlowControlJavaActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int number = Integer.parseInt(fieldNumber.getText().toString());
 
+                //ToastUtilJava aToast = new ToastUtilJava();
+
                 if(number % 2 == 0) {
-                    Toast.makeText(getApplicationContext(), "" + number +"은(는) 2의 배수", Toast.LENGTH_SHORT).show();
+                    ToastUtilJava.Toast_short(number + "은(는) 2의 배수");
+                    //Toast.makeText(getApplicationContext(), "" + number +"은(는) 2의 배수", Toast.LENGTH_SHORT).show();
                 } else if(number % 3 == 0) {
-                    Toast.makeText(getApplicationContext(), "" + number +"은(는) 3의 배수", Toast.LENGTH_SHORT).show();
+                    ToastUtilJava.Toast_short(number + "은(는) 3의 배수");                    //Toast.makeText(getApplicationContext(), "" + number +"은(는) 3의 배수", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(getApplicationContext(), "" + number +"은(는) else", Toast.LENGTH_LONG).show();
+                    ToastUtilJava.Toast_long(number + "은(는) else");
+                    //Toast.makeText(getApplicationContext(), "" + number +"은(는) else", Toast.LENGTH_LONG).show();
                 }
                 switch (number) {
                     case 4:
@@ -44,4 +51,5 @@ public class FlowControlJavaActivity extends AppCompatActivity {
             }
         });
     }
+
 }
